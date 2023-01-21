@@ -1,15 +1,10 @@
 debug:
-  update_interval: 5s
+  update_interval: 10s
 
 sensor:
   - platform: wifi_signal
-    name: "${devicename} WiFi Signal"
-    update_interval: ${update_interval_slow}
-    filters:
-       - median:
-          window_size: ${window_size}
-          send_every: ${send_every}
-          send_first_at: ${send_first_at}
+    name: "WiFi Signal"
+    update_interval: 10s
 
   - platform: uptime
     name: Uptime Sensor
