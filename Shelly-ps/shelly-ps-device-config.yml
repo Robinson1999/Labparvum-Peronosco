@@ -1,0 +1,16 @@
+substitutions:
+  devicename: shelly-ps-01
+  channel_1: Relay
+
+  max_power: "2200"
+
+  # Higher value gives lower watt readout
+  current_res: "0.001100"
+  # Lower value gives lower voltage readout
+  voltage_div: "1911"
+  # Power does not seem to calculated with the calibrated voltage and current vallues, Power needs its own callibration
+  Power_calibration_multiplier: "1.08"
+
+packages:
+  shelly-ps-01: !include x-shelly-ps-00-base-config.yaml
+  x-debug-info: !include x-debug-info.yaml
