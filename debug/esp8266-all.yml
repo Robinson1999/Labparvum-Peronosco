@@ -1,6 +1,4 @@
 
-
-  update_interval_debug: "10s
 debug:
   update_interval_debug: 10
 sensor:
