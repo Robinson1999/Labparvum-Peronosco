@@ -1,21 +1,17 @@
-substitutions:
-  #filter settings
-  window_size_debug: "3"
-  send_every_debug: "1"
-  send_first_at_debug: "1"
+
 
   update_interval_debug: "10s
 debug:
-  update_interval_debug: ${update_interval_debug}
+  update_interval_debug: 10
 sensor:
   - platform: wifi_signal
     name: "WiFi Signal"
-    update_interval: ${update_interval_debug}
+    update_interval: 10
     filters:
        - median:
-          window_size: ${window_size_debug}
-          send_every: ${send_every_debug}
-          send_first_at: ${send_first_at_debug}
+          window_size: 3
+          send_every: 1
+          send_first_at: 1
 
   - platform: uptime
     name: Uptime Sensor
