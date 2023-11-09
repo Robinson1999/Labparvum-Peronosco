@@ -1,5 +1,5 @@
 debug:
-  update_interval: 5s
+  update_interval: 10s
 
 text_sensor:
   - platform: ethernet_info
@@ -15,7 +15,7 @@ text_sensor:
 sensor:
   - platform: uptime
     name: Uptime Sensor
-    update_interval: 5s
+    update_interval: 10s
 
   - platform: debug
     free:
@@ -26,6 +26,15 @@ sensor:
       name: "Loop Time"
     psram:
       name: "Free PSRAM"
+
+- platform: wifi_signal
+    name: "WiFi Signal"
+    update_interval: 10
+    filters:
+       - median:
+          window_size: 3
+          send_every: 1
+          send_first_at: 1
 
 psram:
   mode: octal
